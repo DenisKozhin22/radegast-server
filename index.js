@@ -27,7 +27,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use(express.json())
-
+app.enable('trust proxy')
 // Routes
 app.use('/auth', authRouter)
 app.use('/meetings', meetingsRouter)
