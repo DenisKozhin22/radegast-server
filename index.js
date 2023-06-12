@@ -22,6 +22,7 @@ const corsOptions = {
 	origin: [/^(.*)/],
 	credentials: true,
 	optionSuccessStatus: 200,
+	useCredentials: true
 }
 app.use(cors(corsOptions))
 app.use(cookieParser())
