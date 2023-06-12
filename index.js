@@ -22,12 +22,11 @@ const corsOptions = {
 	origin: [/^(.*)/],
 	credentials: true,
 	optionSuccessStatus: 200,
-	useCredentials: true
 }
 app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use(express.json())
-app.enable('trust proxy')
+app.set('trust proxy', 1)
 // Routes
 app.use('/auth', authRouter)
 app.use('/meetings', meetingsRouter)
