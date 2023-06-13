@@ -31,9 +31,6 @@ app.set('trust proxy', 1)
 app.use('/auth', authRouter)
 app.use('/meetings', meetingsRouter)
 
-app.listen(process.env.PORT || 5000, err => {
-	if (err) {
-		return console.log(err)
-	}
-	console.log('Server OK')
-})
+app.listen(5000, '8ab9a41f357e.vps.myjino.ru', () => {
+  console.log('Server started on port 5000');
+});
